@@ -1,5 +1,6 @@
 import './App.css';
 import {useState, useEffect} from 'react';
+import './index.css';
 
 function App() {
   const [time,setTime] = useState(0);
@@ -30,9 +31,9 @@ function App() {
           <span>{("0" + Math.floor((time /10)%100)).slice(-2)} </span>
         </div>
         <div className="flex align-middle justify-around">
-          {running ? (<button className="bg-red-600 rounded-3xl px-4 py-1.5 w-2/5" onClick={() => { setRunning(false)}}>Stop</button>):
-          ( <button className="bg-green-500 rounded-3xl px-4 py-1.5 w-2/5" onClick={() => { setRunning(true)}}>Start</button>)} 
-          <button className="bg-blue-400 rounded-3xl px-4 py-1.5 w-2/5" onClick={() => setTime(0)}>Reset</button>
+          {running ? (<button className="bg-red-600 btn-styles" onClick={() => { setRunning(false)}}>Stop</button>):
+          ( <button className="bg-green-500 btn-styles" onClick={() => { setRunning(true)}}>Start</button>)} 
+          <button className="bg-blue-500 btn-styles" onClick={() => setTime(0)}>Reset</button>
         </div>
       </div>
    </>

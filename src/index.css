@@ -35,3 +35,12 @@ body {
     background-color: #f9f9f9;
   }
 }
+
+@layer utilities {
+  .btn-styles {
+    border-radius: var(--radius-3xl);
+    padding-block: calc(var(--spacing) * 1.5);
+    width: calc(2/5 * 100%);
+    border-radius: var(--radius-3xl);
+  }
+}
